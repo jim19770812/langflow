@@ -260,7 +260,7 @@ class Settings(BaseSettings):
     Default is 24 hours (86400 seconds). Minimum is 600 seconds (10 minutes)."""
     event_delivery: Literal["polling", "streaming", "direct"] = "streaming"
     """How to deliver build events to the frontend. Can be 'polling', 'streaming' or 'direct'."""
-    lazy_load_components: bool = False
+    lazy_load_components: bool = True
     """If set to True, Langflow will only partially load components at startup and fully load them on demand.
     This significantly reduces startup time but may cause a slight delay when a component is first used."""
 
